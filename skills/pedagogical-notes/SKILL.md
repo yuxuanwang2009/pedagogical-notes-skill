@@ -41,7 +41,7 @@ If a quantity is a heuristic with no derivation, say THAT explicitly. Don't hide
 
 ## Notation hygiene
 
-Open with a Preliminaries section that defines the setup, the basic objects, and any prior results being built on. Even when "everyone knows" a basic object like $V^\pi$, define it. If the document continues an earlier one, restate inherited equations rather than only citing.
+Open with a Preliminaries section that defines the setup, the basic objects, and any prior results being built on. Even when "everyone knows" a basic object like $V^\pi$, define it. (For documents continuing an earlier one, see §Revisions and follow-up documents.)
 
 Two corollaries that are worth their own line:
 - Every symbol introduced should be used; every symbol used should be defined. If you write $\theta \in \mathbb{R}^d$ and never reference $d$, drop it.
@@ -135,7 +135,7 @@ Math: inline in `$...$`, display in `equation` (numbered) or `\[...\]` (unnumber
 
 Environments: `theorem` for named results (give them a name: `[REINFORCE]`); `lemma` for structural facts in service of theorems; `proposition` for significant-but-not-headline; `remark` sparingly and never for forward references.
 
-Prose: no markdown italics; use `\emph{}` sparingly. Default to flowing prose; bullets only for genuinely list-like content. If the document has a Caveats section, put it at the end rather than strewn through the body.
+Prose: no markdown italics; use `\emph{}` sparingly. Default to flowing prose; bullets only for genuinely list-like content.
 
 User-stated preferences (math formatting, tone) take precedence over these defaults; flag and ask if there's a conflict.
 
@@ -184,7 +184,7 @@ Workflow when revising after a discussion:
 1. Distill the *content* the discussion produced (a precise definition, a missed nuance, a design tradeoff). Discard the conversational structure.
 2. Find where that content belongs in the natural flow of the document — usually the same paragraph that was imprecise; sometimes the insight reshapes a section.
 3. Edit in place as if you'd known from the start. Avoid append-only edits that leave the old framing intact.
-4. Ask whether a figure carries the insight better (see the Figures section above). Structural insights — graph topology, alignment, geometry — often do.
+4. Ask whether a figure carries the insight better (see the last paragraph of §Figures).
 5. Read the section cold. Does it read as one author's coherent exposition, or as a transcript with a clarifying coda? If the latter, revise again.
 
 Common revision requests after the first draft:
