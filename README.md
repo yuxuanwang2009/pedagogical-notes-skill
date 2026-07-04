@@ -18,12 +18,19 @@ document.
 
 ## Install
 
-Drop the `pedagogical-notes/` folder into your Claude skills directory:
+**As a plugin marketplace** (this repo ships a `.claude-plugin/marketplace.json`):
+
+```
+/plugin marketplace add yuxuanwang2009/pedagogical-notes-skill
+/plugin install pedagogical-notes@yuxuan-skills
+```
+
+**Or manually** — copy the skill folder into your Claude skills directory:
 
 ```bash
 cd ~/.claude/skills
 git clone https://github.com/yuxuanwang2009/pedagogical-notes-skill tmp-pn
-mv tmp-pn/pedagogical-notes . && rm -rf tmp-pn
+mv tmp-pn/skills/pedagogical-notes . && rm -rf tmp-pn
 ```
 
 Claude Code discovers skills as plain folders under `~/.claude/skills/`, so once
@@ -33,6 +40,9 @@ Claude Code discovers skills as plain folders under `~/.claude/skills/`, so once
 ## Contents
 
 ```
-pedagogical-notes/
-└── SKILL.md   # the skill definition (instructions + LaTeX conventions)
+.claude-plugin/
+└── marketplace.json          # plugin marketplace manifest
+skills/
+└── pedagogical-notes/
+    └── SKILL.md              # the skill definition (instructions + LaTeX conventions)
 ```

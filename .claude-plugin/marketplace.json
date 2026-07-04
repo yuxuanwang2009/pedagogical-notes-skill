@@ -1,0 +1,13 @@
+{
+  "name": "yuxuan-skills",
+  "owner": {
+    "name": "yuxuanwang2009"
+  },
+  "plugins": [
+    {
+      "name": "pedagogical-notes",
+      "source": ".",
+      "description": "Turns a derivation into rigorous lecture-style LaTeX notes (.tex + verified PDF) for a technically strong reader."
+    }
+  ]
+}
