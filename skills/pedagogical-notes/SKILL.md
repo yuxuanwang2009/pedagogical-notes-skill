@@ -49,6 +49,16 @@ Two corollaries that are worth their own line:
 
 ---
 
+## New concept/terminology
+
+When a concept or piece of terminology enters the notes that did not appear in the chat log the notes are built from, do not assume the reader knows it. Either avoid it, or give a one-clause introduction at first use.
+
+The chat log is the reader's baseline: terms that were used in the discussion are fair game unqualified, but a term you reach for while writing up — even a standard one — is new to them. Bad: "…makes the baseline a control variate, so the variance drops," when "control variate" never came up. Good: name it and define it in the same breath — "…turns the baseline into a *control variate*: a quantity of known (here zero) mean added to an estimator to cancel part of its variance without shifting its expectation" — or drop the term and state the mechanism directly.
+
+This is distinct from §"Definition AND motivation", which governs mathematical quantities you introduce and derive; this governs *named concepts and jargon*, whose cost is that an undefined name sends the reader out of the document to look it up.
+
+---
+
 ## No forward references in remarks
 
 If a remark refers to a concept that hasn't been introduced yet, it confuses the reader. Either move it to where the second concept is defined, or delete it. Symptoms: phrases like "as we'll see in PPO", "this contrasts with the off-policy bias below". Audit remarks for this pattern before finalizing.
@@ -141,6 +151,7 @@ User-stated preferences (math formatting, tone) take precedence over these defau
 6. Final pass. Read end to end:
     - Every step tagged load-bearing in step 2 is shown in full; no hard move is hidden behind "it follows that" / "after some algebra" while trivial steps are spelled out. (If the read surfaces a load-bearing step the tagging missed, that is a tagging error — fix the prose and flag the miss in the closing summary, step 8.)
     - Every symbol used has been defined; every defined symbol gets used.
+    - Every named concept or piece of jargon not present in the source discussion is either avoided or introduced in a clause at first use (§New concept/terminology).
     - No awkward or ungrammatical sentences. Read aloud where unsure.
     - No section was silently restructured during a revision.
     - Every figure earns its place (shows something prose handles badly) and stands alone through its caption; none is decorative or merely restates prose.
