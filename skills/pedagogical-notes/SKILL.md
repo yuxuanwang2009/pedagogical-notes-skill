@@ -135,14 +135,15 @@ User-stated preferences (math formatting, tone) take precedence over these defau
 
 1. Identify the results to derive and the chain of identities each rests on.
 2. For each derivation, mark its load-bearing step(s) *before drafting*: walk the chain of transitions and tag each as trivial or load-bearing (the distinction is drawn in §"Derive, don't drop"). Keep this tagged list as working notes — it does not go in the document. This is a separate, deliberate pass: do not assume the load-bearing step will be obvious in hindsight during the final read — by then the draft already reflects whatever (possibly wrong) judgment was made implicitly. The tagging drives where the detail goes in the draft, and becomes the checklist the final pass verifies against.
-3. Plan the structure: Preliminaries → main derivation → refinements → caveats (the last only if the derivation hides conditions not already flagged inline).
-4. Draft the `.tex` file, showing each tagged load-bearing step in full (identity named, intermediate line written, licensing condition stated) and compressing the trivial ones.
+3. Plan the structure: Preliminaries → main derivation → refinements → caveats (the last only if the derivation hides conditions not already flagged inline). At the same time, identify where a figure earns its place (see §Figures — spatial layout, graph structure, function shape, symbol↔code correspondence) and plan those figures into the draft. Figures belong in the first draft, not deferred to a later revision.
+4. Draft the `.tex` file, showing each tagged load-bearing step in full (identity named, intermediate line written, licensing condition stated) and compressing the trivial ones. Draft the figures identified in step 3 inline as TikZ (with `pgfplots` for plots) in the same file, annotated so each caption lets the figure stand alone.
 5. Compile twice with `pdflatex -interaction=nonstopmode` (second pass resolves cross-references). Surface errors and unresolved references with `grep -E "^!|Warning|undefined|Rerun" <log>` — hard errors begin with `!`, but undefined `\eqref`s and "Rerun to get cross-references right" appear only as warnings.
 6. Final pass. Read end to end:
     - Every step tagged load-bearing in step 2 is shown in full; no hard move is hidden behind "it follows that" / "after some algebra" while trivial steps are spelled out. (If the read surfaces a load-bearing step the tagging missed, that is a tagging error — fix the prose and flag the miss in the closing summary, step 8.)
     - Every symbol used has been defined; every defined symbol gets used.
     - No awkward or ungrammatical sentences. Read aloud where unsure.
     - No section was silently restructured during a revision.
+    - Every figure earns its place (shows something prose handles badly) and stands alone through its caption; none is decorative or merely restates prose.
     - No paragraph could be deleted without loss.
     - No custom macros are defined or consumed (`\newcommand`/`\renewcommand`/`\def`/`\DeclareMathOperator`); every symbol is written in standard LaTeX so the math renders without the preamble.
     - Every hedge ("in practice", "typically", "approximately") earns its place.
