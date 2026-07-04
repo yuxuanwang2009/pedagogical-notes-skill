@@ -53,7 +53,18 @@ Two corollaries that are worth their own line:
 
 When a concept or piece of terminology enters the notes that did not appear in the chat log the notes are built from, do not assume the reader knows it. Either avoid it, or give a one-clause introduction at first use.
 
-The chat log is the reader's baseline: terms that were used in the discussion are fair game unqualified, but a term you reach for while writing up — even a standard one — is new to them. Bad: "…makes the baseline a control variate, so the variance drops," when "control variate" never came up. Good: name it and define it in the same breath — "…turns the baseline into a *control variate*: a quantity of known (here zero) mean added to an estimator to cancel part of its variance without shifting its expectation" — or drop the term and state the mechanism directly.
+The chat log is the reader's baseline: terms that were used in the discussion are fair game unqualified, but a term you reach for while writing up — even a standard one — is new to them. Suppose the discussion talked about "subtracting a baseline to reduce variance" but never used the term "control variate":
+
+Bad (assumes the reader knows the term):
+> Subtracting $V_\phi(s_t)$ makes the baseline a control variate, so the gradient's variance drops.
+
+A reader who hasn't seen "control variate" is now stuck on a word the conversation never used.
+
+Good — brief intro (name it, then one clause saying what it is):
+> Subtracting $V_\phi(s_t)$ turns the baseline into a \emph{control variate}: a quantity of known (here zero) mean added to an estimator to cancel part of its variance without shifting its expectation. Since $\mathbb{E}_a[\nabla_\theta \log \pi_\theta(a\mid s)\, V_\phi(s)] = 0$, it removes the component of the gradient correlated with $V_\phi$ while leaving the estimator unbiased.
+
+Good — avoid (drop the jargon, keep the mechanics):
+> Subtracting $V_\phi(s_t)$ leaves the gradient's mean unchanged (the subtracted term has zero expectation) while removing its correlated component, so the variance drops.
 
 This is distinct from §"Definition AND motivation", which governs mathematical quantities you introduce and derive; this governs *named concepts and jargon*, whose cost is that an undefined name sends the reader out of the document to look it up.
 
