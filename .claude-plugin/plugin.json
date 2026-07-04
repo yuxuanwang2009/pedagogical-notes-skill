@@ -1,0 +1,8 @@
+{
+  "name": "pedagogical-notes",
+  "description": "Turns a derivation into rigorous lecture-style LaTeX notes (.tex + verified PDF) for a technically strong reader.",
+  "version": "1.0.0",
+  "author": {
+    "name": "yuxuanwang2009"
+  }
+}
