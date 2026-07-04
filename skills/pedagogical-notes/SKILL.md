@@ -76,12 +76,6 @@ If a remark refers to a concept that hasn't been introduced yet, it confuses the
 
 ---
 
-## Respect existing structure when revising
-
-When asked to revise an existing document (rather than write a new one from scratch), preserve its section structure unless the user asked to restructure it or there is a clear improvement worth flagging. Surgical fixes within sections are almost always preferable to silent reorganization. If you do restructure, say so explicitly so the user can audit.
-
----
-
 ## Honest about heuristics vs. principled methods
 
 When a method has theoretical justification, state it. When it doesn't, state THAT. Do not hide weak justifications behind hand-waving phrases. Examples of common claims that need hedging:
@@ -175,6 +169,8 @@ User-stated preferences (math formatting, tone) take precedence over these defau
 ---
 
 ## Revisions and follow-up documents
+
+**Respect existing structure.** When asked to revise an existing document (rather than write a new one from scratch), preserve its section structure unless the user asked to restructure it or there is a clear improvement worth flagging. Surgical fixes within sections are almost always preferable to silent reorganization. If you do restructure, say so explicitly so the user can audit.
 
 **Don't re-enact the discussion that produced the revision.** When a follow-up conversation surfaces a confusion or sharpens a definition, do not insert a "what X really means" paragraph or Q&A clarification at the spot where the confusion lived. That leaves the discussion's structure visible in the document and makes the prose reactive instead of declarative. Rewrite the original passage so the confusion is unlikely in the first place. The reader should encounter one author's coherent voice, not a transcript with a clarifying coda.
 
